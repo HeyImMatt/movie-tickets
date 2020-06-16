@@ -22,15 +22,39 @@ function Ticket(time, movie, userAge) {
   this.userAge = userAge;
 }
 
+function priceCalc(ticket){
+  let price
+  if (ticket.movie === "New Release 1"){
+    price = 40
+  } else {
+    price = 20
+  }
+
+  if (ticket.time === "Matinee") {
+    price /= 2
+  }
+
+  if (ticket.userAge >= 65 || ticket.userAge <= 10) {
+    price /= 2
+  }
+  return price
+}
+
 
 $(document).ready(function() {
-  let userTicketLog = new TicketsLog()
+  let userTicketLog = new TicketsLog();
   $("#movieSelect").submit(function() {
     event.preventDefault()
 
     let movieTitle = $("#movieTitle input[type='radio']:checked").val();
+    let movieTime = $("#movieTime input[type='radio']:checked").val();
+    let userAge = parseInt($("#age").val());
+
 
     let newTicket = new Ticket(movieTitle, movieTime, userAge)
-  })
+
+    $("div#output").append(`<p>$${priceCalc(newTicket)}</p>`)
+  
+  });
   //User Interface
-}
+});
