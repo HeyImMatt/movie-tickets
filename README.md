@@ -7,7 +7,9 @@
 
 ## Description
 
-_{detailed desc}_
+_A webpage that will allow user to select movie, time of day, 
+and age, then determine the price of their ticket.
+_
 
 ## Behaviors
 

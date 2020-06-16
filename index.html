@@ -10,6 +10,32 @@
   <title>Movie Tickets</title>
 </head>
 <body>
-  
+  <div class="titleSelect">
+    <h1>Movie Tickets</h1>
+    <form id="movieSelect">
+      <div id="movieTitle">
+        <input type="radio" name="movie" id="Movie1" value = "Standard Release 1">
+        <label for="Movie1">Standard Release 1</label>
+        <input type="radio" name="movie" id="Movie2" value = "Standard Release 2">
+        <label for="Movie2">Standard Release 2</label>
+        <input type="radio" name="movie" id="Movie3" value = "New Release 1">
+        <label for="Movie3">New Release 1</label>
+      </div>
+      <div id="movieTime">
+        <input type="radio" name="time" id="matinee">
+        <label for="matinee">9:00am - 4:00pm</label>
+        <input type="radio" name="time" id="regular">
+        <label for="regular">6:00pm - 11:00pm</label>
+      </div>
+      <h3>Age</h3>
+      <div id="ageInput" >
+        <input type="number" id="age" required>
+        <label for="age">Age</label>
+      </div>
+        <button type="submit">Get Price</button>
+    </form>
+  </div>
+  <div class="output">
+  </div>
 </body>
 </html>
