@@ -1,9 +1,9 @@
 #  _Movie Tickets_
 
-#### _{brief desc}_
+#### _Lets user buy movie tickets by selecting movie, time, and inputting age to calculate price_
 ##### __Created:__ 6/16/2020
 ##### __Last Updated:__ 6/16/2020 
-##### By _**Tyson Lackey, Matt Mcfarland, Joseph Pearcy**_  
+##### By _**Tyson Lackey, Matt Mcfarland, Joseph Pearce**_  
 
 ## Description
 
@@ -13,13 +13,14 @@ _{detailed desc}_
 
 | Spec| Example input | Example Output
 | ----------- | ----------- | ----------- |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
+| If no age is inputted when the form is submitted, return error | Age: "" | "Please enter your age" |
+| If no radio button is selected when form is submitted, return error | "" | "please select a movie time" |
+| User enters age, movie, time. Returns price | "Std-Release-1", "6:00pm", "30" | "$15.00" |
+| New Releases are $5 more expensive than standard releases, before discounts | "New-Release-1", "6:00pm", "30" | "$20.00" |
+| Movies showing before 5:00pm are half price | "Std-Release-1", "12:00pm", "30" | "$7.50" |
+| Users over 65 years old receive an additional 20% discount | "Std-Release-1", "12:00pm", "70" | "$6.00" |
+| Users 10 years old or younger receive an additional 50% discount | "Std-Release-1", "12:00pm", "5" | "$3.75" |
+
 
 ## Setup/Installation Requirements
 
