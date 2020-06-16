@@ -19,7 +19,7 @@ _
 | If no radio button is selected when form is submitted, return error | "" | "please select a movie time" |
 | User enters age, movie, time. Returns price | "Std-Release-1", "6:00pm", "30" | "$20.00" |
 | New Releases are twice as expensive than standard releases, before discounts | "New-Release-1", "6:00pm", "30" | "$40.00" |
-| Movies showing before 5:00pm are half price | "Std-Release-1", "12:00pm", "30" | "$10.00" |
+| Movies showing before or at 5:00pm are half price | "Std-Release-1", "12:00pm", "30" | "$10.00" |
 | Users 65 years old or older receive an additional 50% discount | "Std-Release-1", "12:00pm", "70" | "$5.00" |
 | Users 10 years old or younger receive an additional 50% discount | "Std-Release-1", "12:00pm", "5" | "$5.00" |
 

@@ -16,29 +16,24 @@ TicketsLog.prototype.assignId = function() {
 
 
 //Ticket business logic
-function Ticket(time, movie, userAge) {
-  this.time = time;
+function Ticket(movie, time, userAge) {
   this.movie = movie;
+  this.time = time;
   this.userAge = userAge;
+  this.price = 20;
 }
 
-function priceCalc(ticket){
-  let price
-  if (ticket.movie === "New Release 1"){
-    price = 40
-  } else {
-    price = 20
-  }
-
-  if (ticket.time === "Matinee") {
-    price /= 2
-  }
-
-  if (ticket.userAge >= 65 || ticket.userAge <= 10) {
-    price /= 2
-  }
-  return price;
-}
+Ticket.prototype.priceCalc = function(){
+  if (this.movie === "New Release 1"){
+    this.price = 40;
+  } ;
+  if (this.time === "Matinee") {
+    this.price /= 2;
+  };
+  if (this.userAge >= 65 || this.userAge <= 10) {
+    this.price /= 2;
+  };
+};
 
  //User Interface
 
@@ -52,7 +47,7 @@ $(document).ready(function() {
     let userAge = parseInt($("#age").val());
     let newTicket = new Ticket(movieTitle, movieTime, userAge);
     userTicketLog.addTicket(newTicket);
-
-    $("div#output").append(`<p>$${priceCalc(newTicket)}</p>`);
+    newTicket.priceCalc()
+    $("div#output").append(`<p>$${newTicket.price}</p>`);
   });
 });

@@ -10,33 +10,46 @@
   <title>Movie Tickets</title>
 </head>
 <body>
-  <div class="titleSelect">
-    <h1>Movie Tickets</h1>
-    <form id="movieSelect">
-      <div id="movieTitle">
-        <input type="radio" name="movie" id="Movie1" value = "Standard Release 1">
-        <label for="Movie1">Standard Release 1</label>
-        <input type="radio" name="movie" id="Movie2" value = "Standard Release 2">
-        <label for="Movie2">Standard Release 2</label>
-        <input type="radio" name="movie" id="Movie3" value = "New Release 1">
-        <label for="Movie3">New Release 1</label>
-      </div>
-      <div id="movieTime">
-        <input type="radio" name="time" id="matinee" value = "Matinee">
-        <label for="matinee">9:00am - 4:00pm</label>
-        <input type="radio" name="time" id="regular" value = "regular">
-        <label for="regular">6:00pm - 11:00pm</label>
-      </div>
-      <h3>Age</h3>
-      <div id="ageInput" >
-        <input type="number" id="age" required>
-        <label for="age">Age</label>
-      </div>
-        <button type="submit">Get Price</button>
-    </form>
-  </div>
-  <div id="output">
-
+  <div class="container">
+    <div class="titleSelect">
+      <h1>Movie Tickets</h1>
+      <form id="movieSelect">
+        <div id="movieTitle">
+          <input type="radio" name="movie" id="Movie1" value = "Standard Release 1">
+          <label for="Movie1">The King of Staten Island</label>
+          <input type="radio" name="movie" id="Movie2" value = "Standard Release 2">
+          <label for="Movie2">Uncut Gems</label>
+          <input type="radio" name="movie" id="Movie3" value = "New Release 1">
+          <label for="Movie3">My Name is Nobody</label>
+        </div>
+        <div id="movieTime">
+          <input type="radio" name="time" id="9am" value = "Matinee">
+          <label for="9am">9:00am</label>
+          <input type="radio" name="time" id="11am" value = "Matinee">
+          <label for="11am">11:00am</label>
+          <input type="radio" name="time" id="1pm" value = "Matinee">
+          <label for="1pm">1:00pm</label>
+          <input type="radio" name="time" id="3pm" value = "Matinee">
+          <label for="3pm">3:00pm</label>
+          <input type="radio" name="time" id="5pm" value = "Matinee">
+          <label for="5pm">5:00pm</label>
+          <input type="radio" name="time" id="7pm" value = "Regular">
+          <label for="7pm">7:00pm</label>
+          <input type="radio" name="time" id="9pm" value = "Regular">
+          <label for="9pm">9:00pm</label>
+          <input type="radio" name="time" id="11pm" value = "Regular">
+          <label for="11pm">11:00pm</label>
+        </div>
+        <div id="ageInput" >
+          <input type="number" id="age" required>
+          <label for="age">Age</label>
+        </div>
+          <button class="btn btn-primary" type="submit">Get Price</button>
+      </form>
+    </div>
+    <div id="output">
+  
+    </div>
   </div>
 </body>
 </html>
