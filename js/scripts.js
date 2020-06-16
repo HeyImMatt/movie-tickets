@@ -1,11 +1,11 @@
 //TicketsLog usiness Logic
 function TicketsLog(){
-  this.tickets = []
-  this.ticketId = 0
+  this.tickets = [];
+  this.ticketId = 0;
 }
 
 TicketsLog.prototype.addTicket = function(ticket) {
-  ticket.id = this.assignId();
+  ticket.ticketId = this.assignId();
   this.tickets.push(ticket);
 }
 
@@ -37,9 +37,10 @@ function priceCalc(ticket){
   if (ticket.userAge >= 65 || ticket.userAge <= 10) {
     price /= 2
   }
-  return price
+  return price;
 }
 
+ //User Interface
 
 $(document).ready(function() {
   let userTicketLog = new TicketsLog();
@@ -49,12 +50,9 @@ $(document).ready(function() {
     let movieTitle = $("#movieTitle input[type='radio']:checked").val();
     let movieTime = $("#movieTime input[type='radio']:checked").val();
     let userAge = parseInt($("#age").val());
+    let newTicket = new Ticket(movieTitle, movieTime, userAge);
+    userTicketLog.addTicket(newTicket);
 
-
-    let newTicket = new Ticket(movieTitle, movieTime, userAge)
-
-    $("div#output").append(`<p>$${priceCalc(newTicket)}</p>`)
-  
+    $("div#output").append(`<p>$${priceCalc(newTicket)}</p>`);
   });
-  //User Interface
 });
